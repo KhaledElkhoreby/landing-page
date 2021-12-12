@@ -2,7 +2,7 @@
 
 # Demo-Preview
 
-![Landing page preview](/images\chrome-capture.gif "Landing page preview")
+![Landing page preview](/images/chrome-capture.gif "Landing page preview")
 
 # Development
 
