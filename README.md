@@ -2,11 +2,7 @@
 
 # Demo-Preview
 
-<<<<<<< HEAD
 ![Landing page preview](/images\chrome-capture.gif "Landing page preview")
-=======
-![landing page preview](images\chrome-capture.gif "Landing page preview")
->>>>>>> ab314e3f1616bceefe91f14379d28612de4cce67
 
 # Development
 
