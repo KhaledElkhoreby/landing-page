@@ -1,13 +1,39 @@
-# Landing Page Project
+# landing page
 
-## Table of Contents
+# Demo-Preview
 
-- [Instructions](#instructions)
+![The San Juan Mountains are beautiful!](images\chrome-capture.gif "Landing page preview")
 
-## Instructions
+# Development
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Interface and Architecture
 
-To get started, open `js/app.js` and start building out the app's functionality
+- HTML Structure
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+  There are at least 4 sections that have been added to the page.
+
+- Styling
+
+  Styling has been added for active states.
+
+- Usability
+
+  All features are usable across modern desktop, tablet, and phone browsers.
+
+## Landing Page Behavior
+
+- Navigation
+
+  Navigation is built dynamically as an unordered list. Start with `ul` and dynamically build navigation using innerHTML.
+
+- Section Active State
+
+  It should be clear which section is being viewed while scrolling through the page.
+
+- Scroll to Anchor
+
+  When clicking an item from the navigation menu, the link should scroll to the appropriate section.
+
+# Project website
+
+My landing page is [Landing Page](https://khaledelkhoreby.github.io/landing-page).
