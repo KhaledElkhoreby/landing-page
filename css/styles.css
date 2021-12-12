@@ -114,11 +114,11 @@ nav button {
   top: 0;
   width: 100%;
   z-index: 5;
-  transition: ease 1s;
-  -webkit-transition: ease 1s;
-  -moz-transition: ease 1s;
-  -ms-transition: ease 1s;
-  -o-transition: ease 1s;
+  transition: ease 0.5s;
+  -webkit-transition: ease 0.5s;
+  -moz-transition: ease 0.5s;
+  -ms-transition: ease 0.5s;
+  -o-transition: ease 0.5s;
 }
 .hide-header {
   top: -100%;
