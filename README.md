@@ -2,7 +2,7 @@
 
 # Demo-Preview
 
-![The San Juan Mountains are beautiful!](images\chrome-capture.gif "Landing page preview")
+![landing page preview](images\chrome-capture.gif "Landing page preview")
 
 # Development
 
