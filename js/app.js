@@ -26,19 +26,7 @@
 /**
  * End Global Variables
  * Start Helper Functions
- *@description Make section active
- *@param {Event} event - the click event
  */
-function makeSectionActive(event) {
-  const activedElement = document.querySelector(".your-active-class");
-  // if the class="your-active-class" exists in the element remove it and continue the code
-  if (activedElement && !activedElement.classList.toggle("your-active-class")) {
-    const dataNav = event.target.textContent;
-    const tragetElement = document.querySelector(`[data-nav="${dataNav}"]`);
-    tragetElement.classList.add("your-active-class");
-  }
-}
-
 /**
  *@description Add Section
  */
@@ -85,16 +73,31 @@ function addSection() {
  * Begin Main Functions
  *
  */
+// TODO: Build nav and menu at least 4 sections
+for (let i = 0; i < 4; i++) {
+  addSection();
+}
+// TODO: Make first link and first section active
+const activeLink1 =
+  document.querySelector("#navbar__list").children[0].firstChild;
+activeLink1.classList.add("active-link");
+const activeSection = document.querySelector("#section1");
+activeSection.classList.add("your-active-class");
 
-// Set sections as active
 // TODO: Add class 'active' to section when near top of viewport
 document.addEventListener("scroll", () => {
   let sections = document.querySelectorAll("[data-nav]");
   let rect = {};
+  let activeLink = {};
   sections.forEach((section) => {
     rect = section.getBoundingClientRect();
     if (rect.top > -100 && rect.top < rect.height) {
       section.classList.add("your-active-class");
+      let num = document.querySelector(".your-active-class").id.slice(-1);
+      activeLink = document.querySelector("#navbar__list").children[num - 1];
+      if (document.querySelector(".active-link"))
+        document.querySelector(".active-link").classList.remove("active-link");
+      activeLink.classList.add("active-link");
     } else {
       section.classList.remove("your-active-class");
     }
@@ -103,12 +106,21 @@ document.addEventListener("scroll", () => {
 
 // TODO: Scroll to section on link click
 // select ul to delegate event
-document
-  .querySelector("#navbar__list")
-  .addEventListener("click", (event) => makeSectionActive(event));
+document.querySelector("#navbar__list").addEventListener("click", (event) => {
+  event.preventDefault();
+  const activeLink = document.querySelector(".active-link");
+  if (activeLink) activeLink.classList.remove("active-link");
+  event.target.classList.add("active-link");
+  const dataNav = event.target.textContent;
+  const tragetElement = document.querySelector(`[data-nav="${dataNav}"]`);
+  tragetElement.classList.add("your-active-class");
+  tragetElement.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+  });
+});
 
-// TODO: build the nav
-// TODO: Build menu
+// TODO: Add sections
 document.querySelector("nav button").addEventListener("click", addSection);
 
 // TODO: Add a scroll to the top button on the page
